@@ -9,7 +9,7 @@ import NavBar from './components/Navbar';
 
 class App extends Component{
   state={
-    isPage : "Home"
+    isPage : "Kajian"
   }
 
   changePage =(parameter)=>{
@@ -19,15 +19,29 @@ class App extends Component{
   }
   render(){
    const{isPage} = this.state
-   if(isPage === "Home"){
-     return(<div><NavBar changePage={this.changePage}/><Home/></div>)
-   }else if(isPage === "Kitab"){
-     return(<div><NavBar changePage={this.changePage}/><Kitab/></div>)
-   }else if(isPage === "Kajian"){
-     return(<div><NavBar changePage={this.changePage}/><Kajian/></div>)
-   }else if(isPage === "Mondok"){
-     return(<div><NavBar changePage={this.changePage}/><Mondok/></div>)
-   }
+
+   return (
+     <div>
+       <NavBar changePage={this.changePage}/>
+        {isPage === "Home" && (<Home/>)}
+        {isPage === "Kajian" && (<Kajian/>)}
+        {isPage === "Mondok" && (<Mondok/>)}
+        {isPage === "Kitab" && (<Kitab/>)}
+       
+
+        {/* {isPage === "Home" ? (<Home />) : isPage === "Mondok" ? (<Mondok />): isPage === "Kitab" ? (<Kitab />) : (<h1> Halaman tidak ditemukan </h1>)} */}
+     </div>
+   )
+  //  if(isPage === "Home"){
+  //    return(<div><NavBar changePage={this.changePage}/><Home/></div>)
+  //  }else if(isPage === "Kitab"){
+  //    return(<div><NavBar changePage={this.changePage}/><Kitab/></div>)
+  //  }else if(isPage === "Kajian"){
+  //    return(<div><NavBar changePage={this.changePage}/><Kajian/></div>)
+  //  }else if(isPage === "Mondok"){
+  //    return(<div><NavBar changePage={this.changePage}/><Mondok/></div>)
+  //  }
+  
   }
 }
 
