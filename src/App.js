@@ -1,17 +1,34 @@
 import React, { Component } from 'react';
 import './App.css';
-import Counter from './components/Counter';
+import Home from './Pages/Home';
+import Kajian from './Pages/Kajian';
+import Kitab from './Pages/Kitab';
+import Mondok from './Pages/Mondok';
+import NavBar from './components/Navbar';
 
-/*import Home from './Pages/Home'*/
 
 class App extends Component {
-  render() {
-    return(
-      <div>
-       <Counter />
+  state ={
+    isPage : "Home"
+  }
 
-      </div>
-    );
+  changePage=(parameter)=>{
+    this.setState({
+      isPage : parameter
+    })
+  }
+
+  render() {
+    const {isPage} = this.state
+    if(isPage === "Home"){
+      return (<div><NavBar changePage={this.changePage}/><Home /></div>)
+    }else if(isPage === "Kajian"){
+      return (<div><NavBar changePage={this.changePage}/><Kajian /></div>)
+    }else if(isPage === "Kitab"){
+      return (<div><NavBar changePage={this.changePage}/><Kitab /></div>)
+    }else if(isPage === "Mondok"){
+      return (<div><NavBar changePage={this.changePage}/><Mondok /></div>)
+    }
   }
 }
 

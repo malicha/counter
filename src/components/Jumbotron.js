@@ -1,14 +1,18 @@
 import React, {Component} from 'react';
 import { Jumbotron, Container } from 'reactstrap';
+import{ Button} from 'reactstrap';
+import './Jumbotron.css'
 
 export default class JumboTron extends Component{
     render(){
     return (
         <div>
-            <Jumbotron fluid>
+            <Jumbotron className="jumbo"fluid>
                 <Container fluid>
-                <h1>Hello</h1>
-                <p>This is jumbotron</p>
+                <h1>Santren Koding</h1>
+                <p>Intensiv Coding Bootcamp for Yatim & Dhuha</p>
+            <Button color="success">Mulai Belajar</Button>{' '}
+                
                 </Container>
             </Jumbotron>
         </div>
