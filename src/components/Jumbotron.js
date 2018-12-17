@@ -15,6 +15,7 @@ export default class JumboTron extends Component{
                 
                 </Container>
             </Jumbotron>
+            <h1 className="tengah">Daftar Kajian Koding</h1>
         </div>
     )
 }

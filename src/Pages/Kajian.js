@@ -8,7 +8,7 @@ import { Card, CardImg, CardText, CardBody,
     render(){
     return (
       <div>
-       
+       kajian
       </div>
     )
   }
