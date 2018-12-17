@@ -11,6 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+  import {Link} from 'react-router-dom';
 
 import { Button } from 'reactstrap';
 class NavBar extends Component{
@@ -18,16 +19,16 @@ class NavBar extends Component{
         return(
             <div>
                 <Navbar>
-                    <NavbarBrand><img src="https://firebasestorage.googleapis.com/v0/b/santren-koding.appspot.com/o/santrenkoding_logo.png?alt=media&token=83a08081-4259-4b18-8600-c70af12d89bc" height="50px"></img>Santren Koding</NavbarBrand>
+                    <NavbarBrand tag ={Link} to="/" className="mynav"><img src="https://firebasestorage.googleapis.com/v0/b/santren-koding.appspot.com/o/santrenkoding_logo.png?alt=media&token=83a08081-4259-4b18-8600-c70af12d89bc" height="50px"></img>Santren Koding</NavbarBrand>
                     <Nav>
-                        <NavItem onClick={()=> this.props.changePage("Kajian")}>
-                            <NavLink>Kajian Koding</NavLink>
+                        <NavItem>
+                            <NavLink tag = {Link} to= "/kajian">Kajian Koding</NavLink>
                         </NavItem>
-                        <NavItem onClick={()=> this.props.changePage("Mondok")}>
-                            <NavLink>Mondok Koding</NavLink>
+                        <NavItem>
+                            <NavLink tag = {Link} to= "/mondok">Mondok Koding</NavLink>
                         </NavItem>
-                        <NavItem onClick={()=> this.props.changePage("Kitab")}>
-                            <NavLink>Kitab Koding</NavLink>
+                        <NavItem>
+                            <NavLink tag = {Link} to= "/kitab">Kitab Koding</NavLink>
                         </NavItem>
                         <NavItem>
                             <Button outline color="primary">masuk/daftar</Button>

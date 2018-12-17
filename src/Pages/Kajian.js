@@ -7,7 +7,9 @@ import { Card, CardImg, CardText, CardBody,
 
     render(){
     return (
-      <div>ini halaman kajian</div>
+      <div>
+       
+      </div>
     )
   }
 }
