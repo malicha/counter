@@ -9,30 +9,12 @@ import WebApp from './Pages/App';
 
 
 class App extends Component{
-  // state={
-  //   isPage : "Home"
-  // }
-
-  // changePage =(parameter)=>{
-  //   this.setState({
-  //     isPage : parameter
-  //   })
-  // }
   render(){
-  //  const{isPage} = this.state
 
    return (
      <div>
        <WebApp/>
      </div>
-    //  <div>
-    //    <NavBar changePage={this.changePage}/>
-    //     {isPage === "Home" && (<Home/>)}
-    //     {isPage === "Kajian" && (<Kajian/>)}
-    //     {isPage === "Mondok" && (<Mondok/>)}
-    //     {isPage === "Kitab" && (<Kitab/>)}
-       
-    //  </div>
    )
  
   }
